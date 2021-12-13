@@ -1,10 +1,23 @@
 import React from 'react'
+import { DugProvider } from 'dug-react'
+import { SearchInterface } from './search-interface'
 
-import { ExampleComponent } from 'dug-react'
-import 'dug-react/dist/index.css'
+const myConfig = {
+  DUG_URL: `https://helx.renci.org`,
+  DEFAULT_REQUEST_OPTIONS: {
+    index: 'concepts_index',
+    size: 10,
+    offset: 0,
+  },
+  SEARCH_REQUEST_TIMEOUT: 5000,
+}
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  return (
+    <DugProvider config={ myConfig }>
+      <SearchInterface />
+    </DugProvider>
+  )
 }
 
 export default App

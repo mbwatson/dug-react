@@ -1,6 +1,6 @@
 {
-  "name": "dug-react",
-  "version": "1.0.0",
+  "name": "@renci/dug-react",
+  "version": "0.1.0",
   "description": "react hooks for interfacing with dug search",
   "author": "mbwatson",
   "license": "MIT",
